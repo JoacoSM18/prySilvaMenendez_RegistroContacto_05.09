@@ -63,16 +63,21 @@
             // 
             // lstDatos
             // 
+            this.lstDatos.BackColor = System.Drawing.Color.Sienna;
+            this.lstDatos.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lstDatos.ForeColor = System.Drawing.SystemColors.Window;
             this.lstDatos.FormattingEnabled = true;
+            this.lstDatos.ItemHeight = 16;
             this.lstDatos.Location = new System.Drawing.Point(91, 245);
             this.lstDatos.Name = "lstDatos";
-            this.lstDatos.Size = new System.Drawing.Size(281, 95);
+            this.lstDatos.Size = new System.Drawing.Size(281, 84);
             this.lstDatos.TabIndex = 2;
             this.lstDatos.Visible = false;
+            this.lstDatos.SelectedIndexChanged += new System.EventHandler(this.lstDatos_SelectedIndexChanged);
             // 
             // btnGrabar
             // 
-            this.btnGrabar.BackColor = System.Drawing.Color.Orange;
+            this.btnGrabar.BackColor = System.Drawing.Color.DarkOrange;
             this.btnGrabar.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGrabar.Location = new System.Drawing.Point(308, 358);
             this.btnGrabar.Name = "btnGrabar";
@@ -118,8 +123,9 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.Red;
+            this.btnCancelar.BackColor = System.Drawing.Color.Maroon;
             this.btnCancelar.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(46, 358);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(145, 41);

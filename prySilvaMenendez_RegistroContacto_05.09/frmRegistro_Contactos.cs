@@ -28,9 +28,10 @@ namespace prySilvaMenendez_RegistroContacto_05._09
         int vContador = 0;
         private void btnGrabar_Click(object sender, EventArgs e)
         {
+            lstDatos.Show();
             vContacto = txtContacto.Text;
             vTelefono = txtTelefono.Text;
-            string vDatos = vContador + "---" + vContacto + "---" + vTelefono;
+            string vDatos = vContador + "--" + vContacto + "--" + vTelefono;
             lstDatos.Items.Add (vDatos);
             txtTelefono.Text = "";
             txtContacto.Text = "";
@@ -38,6 +39,11 @@ namespace prySilvaMenendez_RegistroContacto_05._09
         }
        
         private void frmRegistro_Contactos_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lstDatos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
