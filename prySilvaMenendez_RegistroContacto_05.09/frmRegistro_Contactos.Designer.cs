@@ -37,6 +37,7 @@
             this.txtContacto = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl1 = new System.Windows.Forms.Label();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblContacto
@@ -63,21 +64,23 @@
             // lstDatos
             // 
             this.lstDatos.FormattingEnabled = true;
-            this.lstDatos.Location = new System.Drawing.Point(91, 291);
+            this.lstDatos.Location = new System.Drawing.Point(91, 245);
             this.lstDatos.Name = "lstDatos";
-            this.lstDatos.Size = new System.Drawing.Size(120, 95);
+            this.lstDatos.Size = new System.Drawing.Size(281, 95);
             this.lstDatos.TabIndex = 2;
+            this.lstDatos.Visible = false;
             // 
             // btnGrabar
             // 
             this.btnGrabar.BackColor = System.Drawing.Color.Orange;
             this.btnGrabar.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(309, 345);
+            this.btnGrabar.Location = new System.Drawing.Point(308, 358);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(132, 41);
             this.btnGrabar.TabIndex = 3;
             this.btnGrabar.Text = "GRABAR";
             this.btnGrabar.UseVisualStyleBackColor = false;
+            this.btnGrabar.Click += new System.EventHandler(this.btnGrabar_Click);
             // 
             // txtTelefono
             // 
@@ -113,12 +116,24 @@
             this.lbl1.TabIndex = 6;
             this.lbl1.Text = "Registro de Contactos";
             // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.Red;
+            this.btnCancelar.Font = new System.Drawing.Font("MS Reference Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(46, 358);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(145, 41);
+            this.btnCancelar.TabIndex = 7;
+            this.btnCancelar.Text = "CANCELAR";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            // 
             // frmRegistro_Contactos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.ClientSize = new System.Drawing.Size(484, 411);
+            this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtContacto);
@@ -131,6 +146,7 @@
             this.Name = "frmRegistro_Contactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Contactos";
+            this.Load += new System.EventHandler(this.frmRegistro_Contactos_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -146,6 +162,7 @@
         private System.Windows.Forms.TextBox txtContacto;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl1;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
 
