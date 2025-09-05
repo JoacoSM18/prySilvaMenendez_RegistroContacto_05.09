@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistro_Contactos));
             this.lblContacto = new System.Windows.Forms.Label();
             this.lblTelefono = new System.Windows.Forms.Label();
             this.lstDatos = new System.Windows.Forms.ListBox();
@@ -127,6 +128,7 @@
             this.Controls.Add(this.lstDatos);
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblContacto);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmRegistro_Contactos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Contactos";
