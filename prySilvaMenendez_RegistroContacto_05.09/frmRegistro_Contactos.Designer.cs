@@ -115,7 +115,7 @@
             // 
             this.lbl1.AutoSize = true;
             this.lbl1.Font = new System.Drawing.Font("Verdana", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl1.Location = new System.Drawing.Point(89, 4);
+            this.lbl1.Location = new System.Drawing.Point(91, 20);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(307, 29);
             this.lbl1.TabIndex = 6;
