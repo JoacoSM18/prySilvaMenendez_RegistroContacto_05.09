@@ -47,5 +47,10 @@ namespace prySilvaMenendez_RegistroContacto_05._09
         {
 
         }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
