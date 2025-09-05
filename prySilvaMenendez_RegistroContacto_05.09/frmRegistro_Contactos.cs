@@ -29,6 +29,7 @@ namespace prySilvaMenendez_RegistroContacto_05._09
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             lstDatos.Show();
+            vContador ++;
             vContacto = txtContacto.Text;
             vTelefono = txtTelefono.Text;
             string vDatos = vContador + "--" + vContacto + "--" + vTelefono;
