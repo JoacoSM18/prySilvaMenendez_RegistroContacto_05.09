@@ -42,7 +42,7 @@
             // 
             this.lblContacto.AutoSize = true;
             this.lblContacto.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContacto.Location = new System.Drawing.Point(107, 111);
+            this.lblContacto.Location = new System.Drawing.Point(107, 109);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(106, 23);
             this.lblContacto.TabIndex = 1;
@@ -57,38 +57,40 @@
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(104, 23);
             this.lblTelefono.TabIndex = 1;
-            this.lblTelefono.Text = "Telefono";
+            this.lblTelefono.Text = "Teléfono";
             // 
             // lstDatos
             // 
             this.lstDatos.FormattingEnabled = true;
-            this.lstDatos.Location = new System.Drawing.Point(74, 300);
+            this.lstDatos.Location = new System.Drawing.Point(91, 291);
             this.lstDatos.Name = "lstDatos";
             this.lstDatos.Size = new System.Drawing.Size(120, 95);
             this.lstDatos.TabIndex = 2;
             // 
             // btnGrabar
             // 
+            this.btnGrabar.BackColor = System.Drawing.Color.Orange;
             this.btnGrabar.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGrabar.Location = new System.Drawing.Point(309, 322);
+            this.btnGrabar.Location = new System.Drawing.Point(309, 345);
             this.btnGrabar.Name = "btnGrabar";
             this.btnGrabar.Size = new System.Drawing.Size(132, 41);
             this.btnGrabar.TabIndex = 3;
             this.btnGrabar.Text = "GRABAR";
-            this.btnGrabar.UseVisualStyleBackColor = true;
+            this.btnGrabar.UseVisualStyleBackColor = false;
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(292, 188);
-            this.txtTelefono.Mask = "9999999999999999999";
+            this.txtTelefono.Location = new System.Drawing.Point(292, 185);
+            this.txtTelefono.Mask = "999999999999999999999999999999";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(149, 20);
             this.txtTelefono.TabIndex = 4;
             this.txtTelefono.ValidatingType = typeof(int);
+            this.txtTelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtTelefono_MaskInputRejected);
             // 
             // txtContacto
             // 
-            this.txtContacto.Location = new System.Drawing.Point(292, 114);
+            this.txtContacto.Location = new System.Drawing.Point(292, 109);
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(149, 20);
             this.txtContacto.TabIndex = 0;
@@ -104,7 +106,7 @@
             // lbl1
             // 
             this.lbl1.AutoSize = true;
-            this.lbl1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl1.Font = new System.Drawing.Font("Verdana", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl1.Location = new System.Drawing.Point(106, 20);
             this.lbl1.Name = "lbl1";
             this.lbl1.Size = new System.Drawing.Size(307, 29);
@@ -115,6 +117,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.lbl1);
             this.Controls.Add(this.label1);
@@ -125,6 +128,7 @@
             this.Controls.Add(this.lblTelefono);
             this.Controls.Add(this.lblContacto);
             this.Name = "frmRegistro_Contactos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Contactos";
             this.ResumeLayout(false);
             this.PerformLayout();

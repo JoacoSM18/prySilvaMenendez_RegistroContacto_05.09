@@ -16,5 +16,10 @@ namespace prySilvaMenendez_RegistroContacto_05._09
         {
             InitializeComponent();
         }
+
+        private void txtTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }
