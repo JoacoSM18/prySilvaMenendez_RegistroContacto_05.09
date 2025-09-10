@@ -25,19 +25,19 @@ namespace prySilvaMenendez_RegistroContacto_05._09
 
         string vContacto = "";
         string vTelefono = "";
-        int vContador = 0;
+        int indice = 0;
         string[] vecContacto = new string[4];
         string[] vecTelefono = new string[4];
         private void btnGrabar_Click(object sender, EventArgs e)
         {
             lstDatos.Show();
-            vContador ++;
             vContacto = txtContacto.Text;
             vTelefono = txtTelefono.Text;
-            string vDatos = vContador + "--" + vContacto + "--" + vTelefono;
+            string vDatos = indice + "--" + vContacto + "--" + vTelefono;
             lstDatos.Items.Add (vDatos);
-            vecContacto[0] = vContacto;
-            vecTelefono[0] = vTelefono;
+            vecContacto[indice] = vContacto;
+            vecTelefono[indice] = vTelefono;
+            indice++;
             txtTelefono.Text = "";
             txtContacto.Text = "";
             txtContacto.Focus();
@@ -56,6 +56,11 @@ namespace prySilvaMenendez_RegistroContacto_05._09
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void txtContacto_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

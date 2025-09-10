@@ -44,10 +44,10 @@
             // 
             this.lblContacto.AutoSize = true;
             this.lblContacto.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContacto.Location = new System.Drawing.Point(87, 106);
+            this.lblContacto.Location = new System.Drawing.Point(92, 104);
             this.lblContacto.Name = "lblContacto";
             this.lblContacto.Size = new System.Drawing.Size(106, 23);
-            this.lblContacto.TabIndex = 1;
+            this.lblContacto.TabIndex = 77;
             this.lblContacto.Text = "Contacto";
             this.lblContacto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -55,10 +55,10 @@
             // 
             this.lblTelefono.AutoSize = true;
             this.lblTelefono.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTelefono.Location = new System.Drawing.Point(87, 180);
+            this.lblTelefono.Location = new System.Drawing.Point(92, 180);
             this.lblTelefono.Name = "lblTelefono";
             this.lblTelefono.Size = new System.Drawing.Size(104, 23);
-            this.lblTelefono.TabIndex = 1;
+            this.lblTelefono.TabIndex = 633;
             this.lblTelefono.Text = "Teléfono";
             // 
             // lstDatos
@@ -68,7 +68,7 @@
             this.lstDatos.ForeColor = System.Drawing.SystemColors.Window;
             this.lstDatos.FormattingEnabled = true;
             this.lstDatos.ItemHeight = 16;
-            this.lstDatos.Location = new System.Drawing.Point(91, 245);
+            this.lstDatos.Location = new System.Drawing.Point(96, 245);
             this.lstDatos.Name = "lstDatos";
             this.lstDatos.Size = new System.Drawing.Size(281, 84);
             this.lstDatos.TabIndex = 2;
@@ -89,11 +89,11 @@
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(249, 183);
+            this.txtTelefono.Location = new System.Drawing.Point(249, 185);
             this.txtTelefono.Mask = "(999)000-0000";
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(86, 20);
-            this.txtTelefono.TabIndex = 4;
+            this.txtTelefono.TabIndex = 1;
             this.txtTelefono.MaskInputRejected += new System.Windows.Forms.MaskInputRejectedEventHandler(this.txtTelefono_MaskInputRejected);
             // 
             // txtContacto
@@ -102,6 +102,7 @@
             this.txtContacto.Name = "txtContacto";
             this.txtContacto.Size = new System.Drawing.Size(149, 20);
             this.txtContacto.TabIndex = 0;
+            this.txtContacto.TextChanged += new System.EventHandler(this.txtContacto_TextChanged);
             // 
             // label1
             // 
