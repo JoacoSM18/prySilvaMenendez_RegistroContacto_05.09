@@ -18,49 +18,52 @@ namespace prySilvaMenendez_RegistroContacto_05._09
             InitializeComponent();
         }
 
-        private void txtTelefono_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
         string vContacto = "";
         string vTelefono = "";
-        int indice = 0;
-        string[] vecContacto = new string[4];
-        string[] vecTelefono = new string[4];
-        private void btnGrabar_Click(object sender, EventArgs e)
-        {
-            lstDatos.Show();
-            vContacto = txtContacto.Text;
-            vTelefono = txtTelefono.Text;
-            string vDatos = indice + "--" + vContacto + "--" + vTelefono;
-            lstDatos.Items.Add (vDatos);
-            vecContacto[indice] = vContacto;
-            vecTelefono[indice] = vTelefono;
-            indice++;
-            txtTelefono.Text = "";
-            txtContacto.Text = "";
-            txtContacto.Focus();
-        }
-       
+        int indice = 1;
+        string[] vecContacto = new string[100];
+        string[] vecTelefono = new string[100];
         private void frmRegistro_Contactos_Load(object sender, EventArgs e)
         {
-
+            mskTelefono.Select(0, 0);
         }
-
-        private void lstDatos_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnGrabar_Click(object sender, EventArgs e)
         {
-
+            if (txtContacto.Text == "" || !mskTelefono.MaskFull)
+            {
+                MessageBox.Show("Datos Incompletos, Por Favor Complete Todos los Campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                MessageBox.Show("Contacto Agregado Exitosamente", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                lstDatos.Show();
+                vContacto = txtContacto.Text;
+                vTelefono = mskTelefono.Text;
+                string vDatos = "Contacto " + indice + " - " + vContacto + " - " + vTelefono;
+                lstDatos.Items.Add(vDatos);
+                vecContacto[indice] = vContacto;
+                vecTelefono[indice] = vTelefono;
+                indice++;
+                mskTelefono.Text = "";
+                txtContacto.Text = "";
+                txtContacto.Focus();
+            }
         }
-
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
-        private void txtContacto_TextChanged(object sender, EventArgs e)
+        private void mskTelefono_Click(object sender, EventArgs e)
         {
+            mskTelefono.Select(0,0);
+        }
 
+        private void txtContacto_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsLetter(e.KeyChar) && !char.IsControl(e.KeyChar) && !char.IsWhiteSpace(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
